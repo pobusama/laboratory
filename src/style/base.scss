@@ -1,0 +1,33 @@
+//0.5px border
+@mixin bor($color: #dfdfdf, $dir:bottom, $pos: relative){
+    position: $pos;
+    &:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        #{$dir}: 0;
+        left: 0;
+        transform: scaleY(0.5);
+        background: $color;
+        height: 1px;
+    }
+}
+
+//0.5px border
+@mixin borVertical($color: #dfdfdf, $dir:left, $pos: relative){
+    position: $pos;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        #{$dir}: 0;
+        transform: scaleX(0.5);
+        background: $color;
+        width: 1px;
+    }
+}
+
+
+.clearfix:before,.clearfix:after {content:"";display:table;}
+.clearfix:after {clear:both;overflow:hidden;}

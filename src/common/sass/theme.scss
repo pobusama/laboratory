@@ -1,0 +1,131 @@
+/* 组件样式 */
+input[type=checkbox],
+input[type=text],
+textarea{
+    border: 1px solid #d4d8d8;
+}
+input[type=radio],
+input[type=checkbox] {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #d4d8d8;
+    padding: 0;
+    margin: 0 10px 0 0;
+    position: relative;
+    outline: none;
+    background: #fff;
+}
+
+input[type=checkbox]:checked,
+input[type=checkbox]:hover {
+    border-color: #02bf87;
+}
+input[type=checkbox]:checked::after {
+    width: 15px;
+    height: 11px;
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    background: 0 0 url(../images/check.png) no-repeat transparent;
+    outline: none;
+}
+input[type=checkbox][disabled] {
+    cursor: not-allowed;
+    color: #7d8a96;
+    border-color: #7d8a96;
+    background: #ccc;
+    opacity: 0.7;
+}
+input[type=radio] {
+    border-radius: 10px;
+}
+input[type=radio]:checked::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 10px;
+    width: 10px;
+    border-color: #02bf87;
+    background-color: #02bf87;
+    border-radius: 5px;
+}
+input[type=text]:focus,
+input[type=checkbox]:focus,
+input[type=number]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid #02BF87 !important;
+    outline: none;
+}
+input[type=text][disabled],
+input[type=checkbox][disabled],
+input[type=number][disabled],
+textarea[disabled],
+select[disabled]{
+    cursor: not-allowed;
+}
+textarea{
+    border: 1px solid #d4d8d8;
+    resize: none;
+}
+select{
+    border: 1px solid #d4d8d8;
+    border-radius: 0;
+    appearance: menulist;
+    background: #fff;
+}
+.btn{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    border-radius: 2px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn-default{
+    @extend .btn;
+    background: #fff;
+    color: #7d8a96;
+    border: 1px solid #d4d8d8;
+}
+.btn-success{
+    @extend .btn;
+    background: #02bf87;
+    color: #fff;
+}
+.btn-success:hover{
+    background: #2cd6aa;
+}
+.btn-cancel{
+    @extend .btn;
+    background: #d4d8d8;
+    color: #7d8a96;
+}
+.btn-cancel:hover{
+    background: #dadada;
+}
+
+.tips{
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    color: #7d8a96;
+    span{
+        vertical-align: middle;
+    }
+}
+//红色星号
+.asterisk{
+    color: red;
+    margin-right: 5px;
+}
+
+.warning{
+    font-size: 12px;
+    color: #e67333;
+    line-height: 1;
+}

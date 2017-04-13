@@ -1,0 +1,6 @@
+<div data-bind="text: 'todos'"></div>
+<ul data-bind="foreach: todos">
+    <li data-bind="css: {completedTodo: completed}">
+        <span data-bind="text: text"></span>
+    </li>
+</ul>
