@@ -10,6 +10,18 @@ import appConfig from './webpack.config.babel';
 import commonConfig from './webpack.config.common.babel';
 import {localAddress, LISTEN_PORT} from './js/config';
 
+// var Koa = require('koa');
+// var webpack = require('webpack');
+// var path = require('path');
+// var serveMiddlware = require('koa-static');
+// var router = require('koa-router');
+// var devMiddleware = require('koa-webpack-dev-middleware');
+// var hotMiddleware = require('koa-webpack-hot-middleware');
+// var appConfig = require('./webpack.config.babel');
+// var commonConfig = require('./webpack.config.common.babel');
+// var {localAddress, LISTEN_PORT} = require('./js/config');
+
+
 let app = new Koa(),
 	routerMiddleware = router(),
 	appCompiler = webpack(appConfig),

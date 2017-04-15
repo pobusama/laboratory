@@ -1,0 +1,3 @@
+{
+	extends: './build/eslint-config/index.js'
+}
